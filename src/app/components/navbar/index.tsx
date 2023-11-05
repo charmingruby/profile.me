@@ -6,7 +6,7 @@ import { Actions } from './actions'
 
 export function Navbar() {
   return (
-    <header className="backdrop-blur-md fixed w-full">
+    <header className="backdrop-blur-md fixed z-50 w-full">
       <MaxWidthWrapper className="h-16 flex items-center justify-between">
         <div>
           <Image

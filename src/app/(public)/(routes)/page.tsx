@@ -12,12 +12,15 @@ import { Heading } from '@/components/ui/heading'
 import { Paragraph } from '@/components/ui/paragraph'
 import { Badge } from '@/components/badge'
 import { IntroductionWrapper } from '@/components/introduction-wrapper'
+import { ChevronDown } from 'lucide-react'
+import nxtImg from '@/assets/technologies/nextjs-original.svg'
+import { SkillItem } from './components/skill-item'
 
 export default function Home() {
   return (
     <div className="space-y-12">
       {/* Hero */}
-      <MaxWidthWrapper className="mt-20 lg:mt-0 lg:h-screen flex items-center">
+      <MaxWidthWrapper className="mt-20 lg:mt-0 lg:h-screen flex items-center relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
           <div className="flex flex-col justify-center">
             <RoleBadge role="Full Stack Developer" />
@@ -55,6 +58,10 @@ export default function Home() {
             <Image src={heroImg} alt="" />
           </div>
         </div>
+
+        <div className="bottom-16 right-1/2 absolute border border-border rounded-full h-12 flex items-end">
+          <ChevronDown className="h-7 w-7 animate-bounce" />
+        </div>
       </MaxWidthWrapper>
 
       {/* Journey */}
@@ -62,7 +69,7 @@ export default function Home() {
         <div className="flex items-center">
           <Image src={profileImg} alt="" className="rounded-xl w-4/5" />
         </div>
-        <div className="flex flex-col justify-center gap-6">
+        <div className="flex flex-col justify-center">
           <IntroductionWrapper>
             <Badge>About me</Badge>
             <Heading>Journey</Heading>
@@ -105,11 +112,51 @@ export default function Home() {
           <Badge>Skills</Badge>
           <Heading>Technologies Knowledge</Heading>
         </IntroductionWrapper>
+
+        <div className="grid grid-cols-3 gap-8">
+          <SkillItem
+            icon={nxtImg}
+            name="Next.js"
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab. Laborum est repellendus molestias quibusdam dolores laudantium aliquam esse."
+          />
+          <SkillItem
+            icon={nxtImg}
+            name="Next.js"
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab. Laborum est repellendus molestias quibusdam dolores laudantium aliquam esse."
+          />
+          <SkillItem
+            icon={nxtImg}
+            name="Next.js"
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab. Laborum est repellendus molestias quibusdam dolores laudantium aliquam esse."
+          />
+        </div>
       </MaxWidthWrapper>
 
       {/* Projects */}
+      <section className="">
+        <MaxWidthWrapper>
+          <IntroductionWrapper>
+            <Badge>Projects</Badge>
+            <Heading>What I{"'"}ve been working</Heading>
+          </IntroductionWrapper>
+        </MaxWidthWrapper>
+      </section>
+
       {/* Experiences */}
+      <MaxWidthWrapper>
+        <IntroductionWrapper>
+          <Badge>Projects</Badge>
+          <Heading>What I{"'"}ve been working</Heading>
+        </IntroductionWrapper>
+      </MaxWidthWrapper>
+
       {/* Contact */}
+      <MaxWidthWrapper>
+        <IntroductionWrapper>
+          <Badge>Projects</Badge>
+          <Heading>What I{"'"}ve been working</Heading>
+        </IntroductionWrapper>
+      </MaxWidthWrapper>
     </div>
   )
 }
