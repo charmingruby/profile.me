@@ -15,7 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} bg-gradient-to-br from-primary-500 to-primary-400 h-screen text-white`}
+        className={`
+          ${GeistSans.className}
+          bg-gradient-to-br from-primary-500 to-primary-400 
+          scrollbar-thin scrollbar-track-gray-palette-600 scrollbar-thumb-gray-palette-300
+          text-gray-palette-200
+        `}
       >
         {children}
       </body>
