@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font'
 import '../styles/globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-primary-500 text-gray-100`}>
+      <body
+        className={`${GeistSans.className} bg-gradient-to-br from-primary-500 to-primary-400 h-screen text-white`}
+      >
         {children}
       </body>
     </html>

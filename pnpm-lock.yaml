@@ -5,9 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  class-variance-authority:
+    specifier: ^0.7.0
+    version: 0.7.0
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
+  geist:
+    specifier: ^1.0.0
+    version: 1.0.0
+  lucide-react:
+    specifier: ^0.292.0
+    version: 0.292.0(react@18.2.0)
   next:
     specifier: 14.0.1
     version: 14.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -167,6 +176,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font@13.5.6:
+    resolution: {integrity: sha512-urmUq05uCVJsBqAAJEV+xK5OTTodrSxdiG+351SOSjlWctywdBM6qX+K9pIe3K48RxjfnxlBbXjGyOJAji+pfw==}
+    dev: false
 
   /@next/swc-darwin-arm64@14.0.1:
     resolution: {integrity: sha512-JyxnGCS4qT67hdOKQ0CkgFTp+PXub5W1wsGvIq98TNbF3YEIN7iDekYhYsZzc8Ov0pWEsghQt+tANdidITCLaw==}
@@ -848,6 +861,12 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /class-variance-authority@0.7.0:
+    resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
+    dependencies:
+      clsx: 2.0.0
+    dev: false
 
   /client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
@@ -1681,6 +1700,12 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
+  /geist@1.0.0:
+    resolution: {integrity: sha512-7hqXZqIdSiFbXjlMZ8Ag0fBAW8RzUjIXPkh160rT4m4ECMtsKdFX+06e0mK28oRCpU+lOB1C5Es8qxzvv7H2Hg==}
+    dependencies:
+      '@next/font': 13.5.6
+    dev: false
+
   /get-intrinsic@1.2.2:
     resolution: {integrity: sha512-0gSo4ml/0j98Y3lngkFEot/zhiCeWsbYIlZ+uZOVgzLyLaUw7wxUL+nCTP0XJvJg1AXulJRI3UJi8GsbDuxdGA==}
     dependencies:
@@ -2203,6 +2228,14 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /lucide-react@0.292.0(react@18.2.0):
+    resolution: {integrity: sha512-rRgUkpEHWpa5VCT66YscInCQmQuPCB1RFRzkkxMxg4b+jaL0V12E3riWWR2Sh5OIiUhCwGW/ZExuEO4Az32E6Q==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
