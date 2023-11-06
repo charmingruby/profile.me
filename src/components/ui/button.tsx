@@ -8,7 +8,7 @@ const button = cva(
     variants: {
       variant: {
         default:
-          'bg-gradient-to-tr from-secondary-dark to-secondary-light text-gray-palette-0',
+          'bg-gradient-to-tr from-secondary-dark to-secondary-light text-white',
       },
 
       size: {

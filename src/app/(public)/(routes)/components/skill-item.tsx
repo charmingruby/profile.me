@@ -8,12 +8,14 @@ interface SkillItemProps {
 
 export function SkillItem({ icon, name, context }: SkillItemProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <Image src={icon} alt="" className="h-10 w-10" />
+    <div className="flex flex-col items-center text-center w-full gap-4">
+      <div className="flex">
+        <Image src={icon} alt="" className="h-8 w-8" />
+      </div>
 
-      <div className="flex flex-col">
-        <strong>{name}</strong>
-        <small className="text-sm">{context}</small>
+      <div className="flex flex-col w-full gap-2">
+        <strong className="text-xl text-gray-palette-0 mt-px">{name}</strong>
+        <small className="text-sm leading-relaxed">{context}</small>
       </div>
     </div>
   )

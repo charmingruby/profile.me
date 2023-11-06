@@ -12,13 +12,23 @@ import { Heading } from '@/components/ui/heading'
 import { Paragraph } from '@/components/ui/paragraph'
 import { Badge } from '@/components/badge'
 import { IntroductionWrapper } from '@/components/introduction-wrapper'
-import { ChevronDown } from 'lucide-react'
-import nxtImg from '@/assets/technologies/nextjs-original.svg'
+import { ChevronDown, Rocket } from 'lucide-react'
 import { SkillItem } from './components/skill-item'
+
+/**
+ * Static for moment
+ */
+import nxtImg from '@/assets/technologies/nextjs-original.svg'
+import graphQlImg from '@/assets/technologies/graphql-plain.svg'
+import elixirImg from '@/assets/technologies/elixir-original.svg'
+import dockerImg from '@/assets/technologies/docker-plain.svg'
+import nodeImg from '@/assets/technologies/nodejs-original.svg'
+import phoenixImg from '@/assets/technologies/phoenix-original.svg'
+import { TimelineItem } from './components/timeline-item'
 
 export default function Home() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-20 w-full">
       {/* Hero */}
       <MaxWidthWrapper className="mt-20 lg:mt-0 lg:h-screen flex items-center relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
@@ -59,7 +69,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bottom-16 right-1/2 absolute border border-border rounded-full h-12 flex items-end">
+        <div className="bottom-16 right-1/2 absolute border border-border rounded-full h-10 flex items-end">
           <ChevronDown className="h-7 w-7 animate-bounce" />
         </div>
       </MaxWidthWrapper>
@@ -108,26 +118,41 @@ export default function Home() {
 
       {/* Skills */}
       <MaxWidthWrapper>
-        <IntroductionWrapper>
+        <IntroductionWrapper className="items-center">
           <Badge>Skills</Badge>
           <Heading>Technologies Knowledge</Heading>
         </IntroductionWrapper>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-12">
           <SkillItem
             icon={nxtImg}
             name="Next.js"
-            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab. Laborum est repellendus molestias quibusdam dolores laudantium aliquam esse."
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab."
           />
           <SkillItem
-            icon={nxtImg}
+            icon={graphQlImg}
             name="Next.js"
-            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab. Laborum est repellendus molestias quibusdam dolores laudantium aliquam esse."
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab."
           />
           <SkillItem
-            icon={nxtImg}
+            icon={elixirImg}
             name="Next.js"
-            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab. Laborum est repellendus molestias quibusdam dolores laudantium aliquam esse."
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab."
+          />
+          <SkillItem
+            icon={dockerImg}
+            name="Next.js"
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab."
+          />
+          <SkillItem
+            icon={nodeImg}
+            name="Next.js"
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab."
+          />
+          <SkillItem
+            icon={phoenixImg}
+            name="Next.js"
+            context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab."
           />
         </div>
       </MaxWidthWrapper>
@@ -143,19 +168,39 @@ export default function Home() {
       </section>
 
       {/* Experiences */}
-      <MaxWidthWrapper>
-        <IntroductionWrapper>
-          <Badge>Projects</Badge>
-          <Heading>What I{"'"}ve been working</Heading>
-        </IntroductionWrapper>
-      </MaxWidthWrapper>
+      <section className="bg-gradient-to-br from-primary-600 to-black w-full py-10 border border-primary-300">
+        <MaxWidthWrapper className="w-full">
+          {/* Timeline */}
+          <div className="max-w-3xl mx-auto">
+            <IntroductionWrapper className="w-full items-center">
+              <Badge>Experiences</Badge>
+              <Heading>Timeline</Heading>
+            </IntroductionWrapper>
+
+            <div className="flex flex-col">
+              <ul className="relative border-l border-dashed border-gray-200 dark:border-gray-700">
+                <TimelineItem />
+                <TimelineItem />
+              </ul>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
 
       {/* Contact */}
-      <MaxWidthWrapper>
-        <IntroductionWrapper>
-          <Badge>Projects</Badge>
-          <Heading>What I{"'"}ve been working</Heading>
-        </IntroductionWrapper>
+      <MaxWidthWrapper className="grid grid-cols-2 gap-12">
+        <div>
+          <Heading>Let{"'"}s chat.</Heading>
+          <Heading>Tell me what you need.</Heading>
+
+          <div>socials</div>
+        </div>
+
+        <div>
+          Send me a message
+          <Rocket />
+          <div></div>
+        </div>
       </MaxWidthWrapper>
     </div>
   )
