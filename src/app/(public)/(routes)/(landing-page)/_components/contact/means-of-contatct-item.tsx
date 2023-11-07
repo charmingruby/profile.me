@@ -16,13 +16,13 @@ export function MeanOfContactItemUsingImage({
 }: MeanOfContactItemUsingImageProps) {
   return (
     <div className="flex items-center gap-2">
-      <div className="bg-primary-300 w-fit p-2 rounded-lg border border-border">
+      <div className="bg-primary-300 w-fit p-2.5 rounded-lg border border-border">
         <Icon className="text-white h-6 w-6" />
       </div>
 
-      <div className="flex flex-col gap-1">
-        <span>{message}</span>
-        <strong className="text-secondary-main">{content}</strong>
+      <div className="flex flex-col gap-0.5">
+        <strong className="font-semibold text-lg">{message}</strong>
+        <span className="text-gray-400 font-medium">{content}</span>
       </div>
     </div>
   )
@@ -43,13 +43,13 @@ export function MeanOfContactItemUsingIcon({
 }: MeanOfContactItemUsingIconProps) {
   return (
     <div className="flex items-center gap-2">
-      <div className="bg-primary-300 w-fit p-2 rounded-lg border border-border">
+      <div className="bg-primary-300 w-fit p-2.5 rounded-lg border border-border">
         <Image src={icon} alt={url} className="h-6 w-6" />
       </div>
 
-      <div className="flex flex-col gap-1">
-        <span>{message}</span>
-        <strong className="text-secondary-main">{content}</strong>
+      <div className="flex flex-col gap-0.5">
+        <strong className="font-semibold text-lg">{message}</strong>
+        <span className="text-gray-400 font-medium">{content}</span>
       </div>
     </div>
   )

@@ -19,8 +19,9 @@ const config: Config = {
           light: '#3BC1E2',
           main: '#2D93AD',
           dark: '#1B5564',
+          darker: '#164450',
         },
-        border: '#555555',
+        border: '#333333',
         'gray-palette': {
           0: '#f7fafc',
           50: '#F0F6F9',

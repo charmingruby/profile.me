@@ -8,7 +8,7 @@ import linkedinImg from '@/assets/socials/linkedin.svg'
 
 export function MeansOfContactList() {
   return (
-    <div className="flex flex-col gap-8 mt-12">
+    <div className="flex flex-col gap-8">
       <MeanOfContactItemUsingImage
         icon={Mail}
         content="gustavodiasa2121@gmail.com"

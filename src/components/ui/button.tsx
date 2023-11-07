@@ -7,12 +7,12 @@ const button = cva(
   {
     variants: {
       variant: {
-        default:
-          'bg-gradient-to-tr from-secondary-dark to-secondary-light text-white',
+        default: 'bg-secondary-main text-white',
       },
 
       size: {
-        default: 'px-4 py-1.5',
+        default: 'px-6 py-2',
+        sm: 'px-4 py-1.5',
       },
     },
     defaultVariants: {
@@ -24,13 +24,14 @@ const button = cva(
 
 type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>
 
-export function Button({ className, variant, ...props }: ButtonProps) {
+export function Button({ className, variant, size, ...props }: ButtonProps) {
   return (
     <button
       className={cn(
         button({
           className,
           variant,
+          size,
         }),
       )}
       {...props}
