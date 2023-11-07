@@ -1,4 +1,3 @@
-import { ExternalLink } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
@@ -15,9 +14,11 @@ export function SocialLink({ imageUrl, name, url }: SocialLinkProps) {
       prefetch={false}
       className="flex items-center gap-2 text-gray-palette-50"
     >
-      <Image src={imageUrl} className="h-4 w-4 mb-0.5" alt="" />
-      <strong className="text-base">{name}</strong>
-      <ExternalLink className="h-4 w-4 mb-0.5" />
+      <Image
+        src={imageUrl}
+        className="hover:opacity-100 opacity-75 h-6 w-6 transition-opacity"
+        alt={`Gustavo's ${name} profile link.`}
+      />
     </Link>
   )
 }

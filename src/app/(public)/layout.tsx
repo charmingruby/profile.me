@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import { Navbar } from '../components/navbar'
-import { Footer } from '../components/footer'
+import { Navbar } from '../_components/navbar'
+import { Footer } from '../_components/footer'
 
 export default function PublicLayout({ children }: PropsWithChildren) {
   return (

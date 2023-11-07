@@ -14,4 +14,5 @@ export const navigationOptions: NavigationOption[] = [
   },
   { label: 'Projects', url: '/' },
   { label: 'Experiences', url: '/' },
+  { label: 'Contact', url: '/' },
 ]

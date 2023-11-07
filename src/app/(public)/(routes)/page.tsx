@@ -1,9 +1,7 @@
 import { MaxWidthWrapper } from '@/components/ui/max-width-wrapper'
-import { SocialLink } from './components/social-link'
 import { githubUrl, linkedinUrl } from '@/site/contact'
 import githubImg from '@/assets/socials/github.svg'
 import linkedinImg from '@/assets/socials/linkedin.svg'
-import { RoleBadge } from './components/role-badge'
 import heroImg from '@/assets/hero.svg'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,7 +11,6 @@ import { Paragraph } from '@/components/ui/paragraph'
 import { Badge } from '@/components/badge'
 import { IntroductionWrapper } from '@/components/introduction-wrapper'
 import { ChevronDown, Rocket } from 'lucide-react'
-import { SkillItem } from './components/skill-item'
 
 /**
  * Static for moment
@@ -24,7 +21,11 @@ import elixirImg from '@/assets/technologies/elixir-original.svg'
 import dockerImg from '@/assets/technologies/docker-plain.svg'
 import nodeImg from '@/assets/technologies/nodejs-original.svg'
 import phoenixImg from '@/assets/technologies/phoenix-original.svg'
-import { TimelineItem } from './components/timeline-item'
+import { RoleBadge } from './_components/role-badge'
+import { SkillItem } from './_components/skills/skill-item'
+import { SocialLink } from './_components/social-link'
+import { TimelineItem } from './_components/experiences/timeline-item'
+import { MeansOfContactList } from './_components/contact/means-of-contact-list'
 
 export default function Home() {
   return (
@@ -53,15 +54,6 @@ export default function Home() {
               </Link>
               .
             </p>
-
-            <div className="flex items-center gap-8 mt-12">
-              <SocialLink imageUrl={githubImg} name="Github" url={githubUrl} />
-              <SocialLink
-                imageUrl={linkedinImg}
-                name="Linkedin"
-                url={linkedinUrl}
-              />
-            </div>
           </div>
 
           <div className="flex items-center">
@@ -76,42 +68,49 @@ export default function Home() {
 
       {/* Journey */}
       <MaxWidthWrapper className="grid grid-cols-2 gap-8">
-        <div className="flex items-center">
-          <Image src={profileImg} alt="" className="rounded-xl w-4/5" />
+        <div className="flex justify-center items-center">
+          <div className="max-w-xs p-1 lg:max-w-sm relative rounded-xl border border-secondary-main ">
+            <Image
+              src={profileImg}
+              alt=""
+              className="rounded-lg aspect-square object-cover z-10"
+            />
+          </div>
         </div>
+
         <div className="flex flex-col justify-center">
           <IntroductionWrapper>
             <Badge>About me</Badge>
             <Heading>Journey</Heading>
           </IntroductionWrapper>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             <Paragraph>
-              Hello! My name is Gustavo, and I am passionate about crafting
-              dynamic experiences. My journey into web development began in 2020
-              when I started at Computer Science university at Federal
-              University of Juiz de Fora(UFJF) and had the opportunity to join a
-              Junior Company, my first foray into the world of software
+              Developer during the day and still a developer during the night. I
+              started my journey in 2021, acting as a Freelancer and Projects
+              Assistant, gaining valuable experience along the way. With this
+              extensive experience, I took the bold step of founding my own
+              software house, Apperize, specializing in custom software
               development.
             </Paragraph>
             <Paragraph>
-              One particular moment stands out as a pivotal turning point in my
-              programming journey: building an E-Commerce website from scratch ,
-              despite having no prior knowledge. This endeavor compelled me to
-              swiftly acquire skills in HTML/CSS for frontend interfaces and PHP
-              with MySQL for backend functionality. Although it was a
-              challenging and occasionally stressful undertaking, the sense of
-              reward and fulfillment I experienced was unparalleled.
+              My passion lies in cultivating collaboration and igniting
+              innovation within teams to produce groundbreaking solutions that
+              drive business success. I{"'"}m perpetually committed to
+              continuous learning, ensuring I remain at the forefront of market
+              trends. I thrive on consistently pushing the boundaries of
+              technology and creativity. I genuinely live and breathe technology
+              24/7.
             </Paragraph>
-            <Paragraph>
-              Since then, I have been immersing myself in the realm of
-              JavaScript since 2021. While initially captivated by frontend
-              development, I have since broadened my horizons and aspire to gain
-              proficiency in every facet of the development process. My
-              continuous dedication to learning and mastering various aspects of
-              web development fuels my growth and fuels my enthusiasm for this
-              ever-evolving field
-            </Paragraph>
+
+            <div className="flex items-center gap-8 mt-4">
+              <SocialLink imageUrl={githubImg} name="Github" url={githubUrl} />
+              <SocialLink
+                imageUrl={linkedinImg}
+                name="Github"
+                url={linkedinUrl}
+              />
+            </div>
           </div>
         </div>
       </MaxWidthWrapper>
@@ -123,7 +122,7 @@ export default function Home() {
           <Heading>Technologies Knowledge</Heading>
         </IntroductionWrapper>
 
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-cols-3 gap-8">
           <SkillItem
             icon={nxtImg}
             name="Next.js"
@@ -139,6 +138,7 @@ export default function Home() {
             name="Next.js"
             context="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam quod at quasi ab."
           />
+
           <SkillItem
             icon={dockerImg}
             name="Next.js"
@@ -189,17 +189,50 @@ export default function Home() {
 
       {/* Contact */}
       <MaxWidthWrapper className="grid grid-cols-2 gap-12">
-        <div>
-          <Heading>Let{"'"}s chat.</Heading>
-          <Heading>Tell me what you need.</Heading>
+        <div className="flex flex-col">
+          <div>
+            <Heading>Let{"'"}s chat.</Heading>
+            <Heading>Tell me what you need.</Heading>
+          </div>
 
-          <div>socials</div>
+          <div className="mt-6">
+            <strong>Let{"'"}s do something together.</strong>
+          </div>
+
+          <MeansOfContactList />
         </div>
 
-        <div>
-          Send me a message
-          <Rocket />
-          <div></div>
+        <div className="flex flex-col justify-center">
+          <div className="flex items-center gap-2">
+            <strong>Send me a message</strong>
+            <Rocket />
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {/* Full name */}
+            <input
+              placeholder="Full name*"
+              className="bg-primary-300 border border-border h-12 px-3 py-2 w-full rounded-full outline-none focus:ring-2 ring-secondary-main"
+            />
+
+            {/* Email address */}
+            <input
+              placeholder="Full name*"
+              className="bg-primary-300 border border-border px-3 py-2 w-full rounded-full outline-none focus:ring-2 ring-secondary-main"
+            />
+
+            {/* Subject */}
+            <input
+              placeholder="Full name*"
+              className="bg-primary-300 border border-border px-3 py-2 w-full rounded-full outline-none focus:ring-2 ring-secondary-main"
+            />
+
+            {/* Message */}
+            <input
+              placeholder="Full name*"
+              className="bg-primary-300 border border-border px-3 py-2 w-full rounded-full outline-none focus:ring-2 ring-secondary-main"
+            />
+          </div>
         </div>
       </MaxWidthWrapper>
     </div>
