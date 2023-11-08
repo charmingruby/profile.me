@@ -5,7 +5,7 @@ import { cn } from '@/libs/cn'
 const heading = cva('', {
   variants: {
     variant: {
-      default: 'text-5xl text-gray-palette-0 font-bold',
+      default: 'text-3xl text-gray-palette-0 font-bold lg:text-5xl',
     },
   },
   defaultVariants: {

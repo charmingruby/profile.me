@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font'
 import '../styles/globals.css'
+import { DrawerContextProvider } from '@/contexts/drawer-context'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,16 +15,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`
+      <DrawerContextProvider>
+        <body
+          className={`
           ${GeistSans.className}
           bg-gradient-to-br from-primary-500 to-primary-400 
           scrollbar-thin scrollbar-track-gray-palette-600 scrollbar-thumb-gray-palette-300
           text-gray-palette-200
         `}
-      >
-        {children}
-      </body>
+        >
+          {children}
+        </body>
+      </DrawerContextProvider>
     </html>
   )
 }

@@ -20,6 +20,7 @@ import { Annotation } from '@/components/annotation'
 import { EmailForm } from './_components/email-form'
 import { ProjectItem } from './_components/project-item'
 import { Timeline } from './_components'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -31,10 +32,13 @@ export default function Home() {
             <RoleBadge role="Full Stack Developer" />
 
             {/* Heading */}
-            <h1 className="font-bold text-6xl my-0 mt-8 text-gray-palette-0">
-              Hello, I{"'"}m Gustavo Dias
+            <h1 className="font-bold my-0 mt-8 text-gray-palette-0 text-4xl lg:text-6xl ">
+              Hello, I{"'"}m
             </h1>
 
+            <h1 className="bg-clip-text bg-gradient-to-r from-secondary-light via-[#00F5D4] to-secondary-main text-transparent font-bold my-0 lg:text-6xl">
+              Gustavo Dias
+            </h1>
             {/* Description */}
             <p className="font-medium text-gray-palette-200 mt-8 leading-relaxed">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -66,8 +70,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex items-center">
-            <Image src={heroImg} alt="" />
+          <div className="flex items-center justify-center">
+            <Image src={heroImg} alt="" className="w-4/5 lg:w-full" />
           </div>
         </div>
 
@@ -77,8 +81,8 @@ export default function Home() {
       </MaxWidthWrapper>
 
       {/* Journey */}
-      <MaxWidthWrapper className="grid grid-cols-2 gap-8 mt-28">
-        <div className="flex justify-center items-center">
+      <MaxWidthWrapper className="grid grid-cols-1 gap-8 mt-28 lg:grid-cols-2">
+        <div className="flex justify-center items-center order-last lg:order-first">
           <div className="max-w-xs p-1 lg:max-w-sm relative rounded-xl border border-secondary-main ">
             <Image
               src={profileImg}
@@ -89,7 +93,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col justify-center">
-          <IntroductionWrapper className="mb-6">
+          <IntroductionWrapper className="lg:mb-6">
             <SectionBadge>About me</SectionBadge>
             <Heading>Journey</Heading>
           </IntroductionWrapper>
@@ -118,13 +122,13 @@ export default function Home() {
 
       {/* Skills */}
       <MaxWidthWrapper className="mt-28">
-        <IntroductionWrapper className="items-center">
+        <IntroductionWrapper className="lg:text-center lg:items-center">
           <SectionBadge>Skills</SectionBadge>
           <Heading>Technologies with proficiency</Heading>
           <Annotation>Current preferred stacks to work with.</Annotation>
         </IntroductionWrapper>
 
-        <div className="grid grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-5 lg:gap-8">
           {skills.map(({ name, logo, category }) => (
             <SkillItem key={name} icon={logo} name={name} category={category} />
           ))}
@@ -132,31 +136,27 @@ export default function Home() {
       </MaxWidthWrapper>
 
       {/* Projects */}
-      <MaxWidthWrapper className="mt-28">
+      <MaxWidthWrapper className="mt-16 lg:mt-28">
         <IntroductionWrapper>
           <SectionBadge>Projects</SectionBadge>
 
-          <div className="flex justify-between items-center">
-            <Heading>What I{"'"}ve been working</Heading>
-
-            <Link
-              href="/"
-              prefetch={false}
-              className="flex items-center gap-1 text-gray-palette-300"
-            >
-              <span className="font-medium">View all</span>
-              <ChevronRight className="h-4 w-4 mb-px" />
-            </Link>
-          </div>
+          <Heading>What I{"'"}ve been working</Heading>
         </IntroductionWrapper>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
           <ProjectItem />
           <ProjectItem />
           <ProjectItem />
           <ProjectItem />
-          <ProjectItem />
-          <ProjectItem />
+        </div>
+
+        <div className="flex justify-center w-full mt-12">
+          <Link href="/" prefetch={false}>
+            <Button>
+              <span className="font-medium">View all</span>
+              <ChevronRight className="h-4 w-4 mb-px" />
+            </Button>
+          </Link>
         </div>
       </MaxWidthWrapper>
 
@@ -179,7 +179,7 @@ export default function Home() {
       <MaxWidthWrapper className="flex flex-col gap-4 mb-14">
         <SectionBadge>Contact</SectionBadge>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="w-full">
             <IntroductionWrapper className="mb-8">
               <div className="flex flex-col gap-2 ">

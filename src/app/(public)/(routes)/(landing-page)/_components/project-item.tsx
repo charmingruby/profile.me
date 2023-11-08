@@ -12,7 +12,7 @@ export function ProjectItem() {
     <Card className="gap-0">
       <div className="flex flex-col gap-1">
         <div className="flex items-center justify-between">
-          <strong className="text-2xl text-gray-palette-0">Apperize</strong>
+          <strong className="text-3xl text-gray-palette-0">Apperize</strong>
           <Image src={githubImg} alt="" className="h-6 w-6" />
         </div>
 
@@ -33,11 +33,11 @@ export function ProjectItem() {
       </div>
 
       <div className="flex items-center gap-4 mt-8">
-        <Button size="sm" className="text-sm py-1 px-2.5">
+        <Button size="sm" className="text-base py-1 px-3">
           View details
         </Button>
 
-        <div className="flex items-center text-sm font-medium gap-1 text-gray-palette-300">
+        <div className="flex items-center text-base font-medium gap-1 text-gray-palette-300 hover:text-gray-palette-0 cursor-pointer transition-colors">
           Demo <ArrowUpRight className="h-4 w-4" />
         </div>
       </div>

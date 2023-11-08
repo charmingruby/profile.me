@@ -3,7 +3,7 @@ import { VariantProps, cva } from 'class-variance-authority'
 import { ComponentProps } from 'react'
 
 const button = cva(
-  'flex items-center justify-center gap-2 rounded-full font-medium',
+  'flex items-center justify-center gap-1 rounded-full font-medium shadow-sm',
   {
     variants: {
       variant: {

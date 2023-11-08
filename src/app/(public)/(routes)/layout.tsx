@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
-import { Navbar } from './_components/navbar'
-import { Footer } from './_components/footer'
+import { Footer } from '../_components/footer'
+import { Navbar } from '../_components/navbar'
 
-export function RootLayoutComponent({ children }: PropsWithChildren) {
+export default function PublicLayout({ children }: PropsWithChildren) {
   return (
     <div className="w-full flex flex-col items-center">
       <Navbar />

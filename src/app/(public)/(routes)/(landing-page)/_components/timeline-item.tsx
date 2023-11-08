@@ -29,7 +29,7 @@ export function TimelineItem({
         <Calendar className="h-3.5 w-3.5" />
       </span>
 
-      <h3 className="flex items-center mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
+      <h3 className="flex items-center mb-2 text-2xl font-semibold text-gray-palette-0">
         {title}{' '}
         {isTheMostRecent && (
           <span className=" bg-secondary-main text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full ml-3">
