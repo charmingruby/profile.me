@@ -1,5 +1,5 @@
 import logoImg from '@/assets/logo/logo.svg'
-import { MaxWidthWrapper } from '@/components/ui/max-width-wrapper'
+import { MaxWidthWrapper } from '../../../../components/ui/max-width-wrapper'
 import Image from 'next/image'
 import { MainNav } from './main-nav'
 import { Actions } from './actions'

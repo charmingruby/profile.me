@@ -1,24 +1,25 @@
 import { MaxWidthWrapper } from '@/components/ui/max-width-wrapper'
-import { githubUrl, linkedinUrl } from '@/site/contact'
+import { githubUrl, linkedinUrl } from '../../../../site/contact'
 import githubImg from '@/assets/socials/github.svg'
 import linkedinImg from '@/assets/socials/linkedin.svg'
 import heroImg from '@/assets/hero.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import profileImg from '@/assets/profile-img.png'
+import profileImg from '@/assets/gustavo-dias-profile.jpeg'
 import { Heading } from '@/components/ui/heading'
 import { Paragraph } from '@/components/ui/paragraph'
-import { Badge } from '@/components/badge'
+import { SectionBadge } from '@/components/section-badge'
 import { IntroductionWrapper } from '@/components/introduction-wrapper'
-import { ChevronDown, ChevronRight, Download } from 'lucide-react'
+import { ChevronDown, ChevronRight, Download, Mail } from 'lucide-react'
 import { RoleBadge } from './_components/role-badge'
-import { SkillItem } from './_components/skills/skill-item'
+import { SkillItem } from './_components/skill-item'
 import { SocialLink } from './_components/social-link'
-import { MeansOfContactList } from './_components/contact/means-of-contact-list'
-import { skills } from '@/mocks/skills'
+import { MeansOfContactList } from './_components/means-of-contact-list'
+import { skills } from '../../../../mocks/skills'
 import { Annotation } from '@/components/annotation'
-import { EmailForm } from './_components/contact/email-form'
-import { Timeline } from './_components/experiences'
+import { EmailForm } from './_components/email-form'
+import { ProjectItem } from './_components/project-item'
+import { Timeline } from './_components'
 
 export default function Home() {
   return (
@@ -89,7 +90,7 @@ export default function Home() {
 
         <div className="flex flex-col justify-center">
           <IntroductionWrapper className="mb-6">
-            <Badge>About me</Badge>
+            <SectionBadge>About me</SectionBadge>
             <Heading>Journey</Heading>
           </IntroductionWrapper>
 
@@ -118,7 +119,7 @@ export default function Home() {
       {/* Skills */}
       <MaxWidthWrapper className="mt-28">
         <IntroductionWrapper className="items-center">
-          <Badge>Skills</Badge>
+          <SectionBadge>Skills</SectionBadge>
           <Heading>Technologies with proficiency</Heading>
           <Annotation>Current preferred stacks to work with.</Annotation>
         </IntroductionWrapper>
@@ -133,7 +134,7 @@ export default function Home() {
       {/* Projects */}
       <MaxWidthWrapper className="mt-28">
         <IntroductionWrapper>
-          <Badge>Projects</Badge>
+          <SectionBadge>Projects</SectionBadge>
 
           <div className="flex justify-between items-center">
             <Heading>What I{"'"}ve been working</Heading>
@@ -149,23 +150,13 @@ export default function Home() {
           </div>
         </IntroductionWrapper>
 
-        <div className="grid grid-cols-2">
-          <div>
-            {/* Name */}
-            <div>
-              <span>Apperize</span>
-            </div>
-
-            {/* Description */}
-            <div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
-                quasi perferendis suscipit, eius obcaecati ratione numquam, sint
-                animi iure in doloribus dolor magni vel totam voluptates
-                mollitia nam, ipsa quam!
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-2 gap-8">
+          <ProjectItem />
+          <ProjectItem />
+          <ProjectItem />
+          <ProjectItem />
+          <ProjectItem />
+          <ProjectItem />
         </div>
       </MaxWidthWrapper>
 
@@ -175,7 +166,7 @@ export default function Home() {
           {/* Timeline */}
           <div className="max-w-2xl mx-auto">
             <IntroductionWrapper className="w-full items-center">
-              <Badge>Experiences</Badge>
+              <SectionBadge>Experiences</SectionBadge>
               <Heading>Timeline</Heading>
             </IntroductionWrapper>
 
@@ -186,7 +177,7 @@ export default function Home() {
 
       {/* Contact */}
       <MaxWidthWrapper className="flex flex-col gap-4 mb-14">
-        <Badge>Contact</Badge>
+        <SectionBadge>Contact</SectionBadge>
 
         <div className="grid grid-cols-2 gap-8">
           <div className="w-full">
@@ -200,7 +191,13 @@ export default function Home() {
             <MeansOfContactList />
           </div>
 
-          <EmailForm />
+          <div className="flex flex-col justify-center">
+            <div className="flex items-center gap-2 mb-4 text-gray-400">
+              <Mail className="h-4 w-4 mb-px" />
+              <h3>Feel free to message me</h3>
+            </div>
+            <EmailForm />
+          </div>
         </div>
       </MaxWidthWrapper>
     </div>
