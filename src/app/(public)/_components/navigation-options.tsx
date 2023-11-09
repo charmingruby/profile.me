@@ -6,12 +6,12 @@ export interface NavigationOption {
 export const navigationOptions: NavigationOption[] = [
   {
     label: 'About',
-    url: '/',
+    url: 'about',
   },
   {
     label: 'Skills',
-    url: '/',
+    url: 'skills',
   },
-  { label: 'Projects', url: '/' },
-  { label: 'Experiences', url: '/' },
+  { label: 'Projects', url: 'projects' },
+  { label: 'Experiences', url: 'experiences' },
 ]

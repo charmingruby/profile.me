@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <DrawerContextProvider>
         <body
           className={`
@@ -22,6 +22,7 @@ export default function RootLayout({
           bg-gradient-to-br from-primary-500 to-primary-400 
           scrollbar-thin scrollbar-track-gray-palette-600 scrollbar-thumb-gray-palette-300
           text-gray-palette-200
+          scroll-smooth
         `}
         >
           {children}

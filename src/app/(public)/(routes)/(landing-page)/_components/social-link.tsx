@@ -16,7 +16,7 @@ export function SocialLink({ imageUrl, name, url }: SocialLinkProps) {
     >
       <Image
         src={imageUrl}
-        className="hover:opacity-100 opacity-75 h-5 w-5 transition-opacity"
+        className="hover:opacity-100 opacity-75 h-5 w-5 sm:h-6 sm:w-6 transition-opacity"
         alt={`Gustavo's ${name} profile link.`}
       />
     </Link>

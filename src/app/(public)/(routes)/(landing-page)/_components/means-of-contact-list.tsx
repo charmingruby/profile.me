@@ -2,30 +2,31 @@ import { Mail } from 'lucide-react'
 import {
   MeanOfContactItemUsingImage,
   MeanOfContactItemUsingIcon,
-} from './means-of-contatct-item'
+} from './means-of-contact-item'
 import githubImg from '@/assets/socials/github.svg'
 import linkedinImg from '@/assets/socials/linkedin.svg'
+import { email, githubUrl, linkedinUrl } from '@/site/contact'
 
 export function MeansOfContactList() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-row justify-center sm:justify-start sm:flex-col gap-4 lg:gap-8">
       <MeanOfContactItemUsingImage
         icon={Mail}
-        content="gustavodiasa2121@gmail.com"
+        content={email}
         message="Mail me at"
         url="/"
       />
 
       <MeanOfContactItemUsingIcon
         icon={githubImg}
-        content="gustavodiasa2121@gmail.com"
+        content={githubUrl}
         message="Mail me at"
         url="/"
       />
 
       <MeanOfContactItemUsingIcon
         icon={linkedinImg}
-        content="gustavodiasa2121@gmail.com"
+        content={linkedinUrl}
         message="Mail me at"
         url="/"
       />

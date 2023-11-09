@@ -1,44 +1,39 @@
 interface Timeline {
   role: string
   entreprise: string
-  finishedAt?: Date
-  startedAt: Date
+  activityPeriod: string
   description: string
   tecs: string[]
 }
 
 export const timelines: Timeline[] = [
   {
-    role: 'Founder and Developer',
     entreprise: 'Apperize',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ex voluptatem at nihil iusto a laudantium officiis accusamus ullam, reiciendis ducimus debitis corporis quidem vel praesentium placeat recusandae quo repellat.',
-    startedAt: new Date(),
-    finishedAt: new Date(),
-    tecs: ['Next', 'React'],
+    role: 'Founder and Developer',
+    description: `Developed an E-commerce, and maintained customer's websites.`,
+    tecs: ['javascript', 'typescript', 'react', 'php', 'html', 'css', 'mysql'],
+    activityPeriod: '2022 - 2023',
   },
   {
-    role: 'Projects Assistant',
     entreprise: 'Code Jr.',
-    description: "Developed an E-commerce, and maintained customer's websites.",
-    startedAt: new Date(),
-    finishedAt: new Date(),
-    tecs: ['Elixir'],
+    role: 'Projects Assistant',
+    description: `Developed an E-commerce, and maintained customer's websites.`,
+    tecs: ['javascript', 'typescript', 'react', 'php', 'html', 'css', 'mysql'],
+    activityPeriod: '2022 - 2023',
   },
   {
-    role: 'Professional Training',
     entreprise: 'UFJF',
-    description: "Developed an E-commerce, and maintained customer's websites.",
-    startedAt: new Date(),
-    finishedAt: new Date(),
-    tecs: ['Elixir'],
+    role: 'Professional Training',
+    description:
+      'Developed a teleconsultation application for remote medical care of patients with no financial conditions.',
+    tecs: ['React Native', 'Node', 'UI/UX'],
+    activityPeriod: '2022 - 2023',
   },
   {
-    role: 'Professional Training',
     entreprise: 'UFJF',
-    description: "Developed an E-commerce, and maintained customer's websites.",
-    startedAt: new Date(),
-    finishedAt: new Date(),
-    tecs: ['Elixir'],
+    role: 'Professional Training',
+    description: `Developed a project that analyzes developer's skills by the commits on Github.`,
+    tecs: ['Java'],
+    activityPeriod: '2022 - 2023',
   },
 ]

@@ -3,14 +3,16 @@ import { VariantProps, cva } from 'class-variance-authority'
 import { ComponentProps } from 'react'
 
 const button = cva(
-  'flex items-center justify-center gap-1 rounded-full font-medium shadow-sm',
+  'flex items-center justify-center w-full gap-1 rounded-full font-medium shadow-sm',
   {
     variants: {
       variant: {
-        default: 'bg-secondary-main text-white',
+        default:
+          'bg-secondary-main hover:bg-secondary-light transition-colors active:bg-secondary-dark text-white',
       },
 
       size: {
+        lg: 'px-4 py-1.5 md:px-8 md:py-2 text-lg',
         default: 'px-6 py-2',
         sm: 'px-4 py-1.5',
       },

@@ -14,6 +14,7 @@ const config: Config = {
           '400': '#151515',
           '500': '#0A0A0A',
           '600': '#0D0D0D',
+          '700': '#000',
         },
         secondary: {
           light: '#3BC1E2',
