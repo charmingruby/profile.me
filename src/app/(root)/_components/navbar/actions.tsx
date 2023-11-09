@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function Actions() {
   return (
-    <Link href="/contact" prefetch={false}>
+    <Link href="/#contact" prefetch={false}>
       <Button size="sm">Contact me</Button>
     </Link>
   )

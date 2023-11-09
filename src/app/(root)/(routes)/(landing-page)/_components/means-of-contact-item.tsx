@@ -19,7 +19,7 @@ export function MeanOfContactItemUsingImage({
     <Link
       href={url}
       prefetch={false}
-      className="flex flex-col sm:flex-row sm:items-center gap-2"
+      className="flex flex-col sm:flex-row sm:items-center gap-2 group"
     >
       <div className="bg-primary-300 w-fit p-2 sm:p-2.5 rounded-lg border border-border">
         <Icon className="h-6 w-6" />
@@ -27,7 +27,7 @@ export function MeanOfContactItemUsingImage({
 
       <div className="hidden sm:flex flex-col gap-0.5">
         <strong className="font-semibold text-xl">{message}</strong>
-        <span className="text-base sm:text-base text-gray-400 font-medium break-all">
+        <span className="text-base sm:text-base text-gray-400 font-medium break-all group-hover:underline group-hover:text-gray-palette-0 transition-all">
           {content}
         </span>
       </div>
@@ -52,7 +52,7 @@ export function MeanOfContactItemUsingIcon({
     <Link
       href={url}
       prefetch={false}
-      className="flex flex-col sm:flex-row sm:items-center gap-2"
+      className="flex flex-col sm:flex-row sm:items-center gap-2 group"
     >
       <div className="bg-primary-300 w-fit p-2 sm:p-2.5 rounded-lg border border-border">
         <Image src={icon} alt={url} className="h-6 w-6" />
@@ -60,7 +60,7 @@ export function MeanOfContactItemUsingIcon({
 
       <div className="hidden sm:flex flex-col gap-0.5">
         <strong className="font-semibold text-xl">{message}</strong>
-        <span className="text-base sm:text-base text-gray-400 font-medium break-all">
+        <span className="text-base sm:text-base text-gray-400 font-medium break-all group-hover:underline group-hover:text-gray-palette-0 transition-all">
           {content}
         </span>
       </div>

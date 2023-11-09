@@ -14,21 +14,21 @@ export function MeansOfContactList() {
         icon={Mail}
         content={email}
         message="Mail me at"
-        url="/"
+        url="https://mail.google.com/mail/?view=cm&source=mailto&to=[gustavodiasa2121@gmail.com]"
       />
 
       <MeanOfContactItemUsingIcon
         icon={githubImg}
         content={githubUrl}
-        message="Mail me at"
-        url="/"
+        message="Check repos at"
+        url={githubUrl}
       />
 
       <MeanOfContactItemUsingIcon
         icon={linkedinImg}
         content={linkedinUrl}
-        message="Mail me at"
-        url="/"
+        message="Let's connect"
+        url={linkedinUrl}
       />
     </div>
   )

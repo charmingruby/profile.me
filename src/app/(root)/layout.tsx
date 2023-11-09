@@ -8,7 +8,6 @@ export default function PublicLayout({ children }: PropsWithChildren) {
     <div className="w-full flex flex-col items-center">
       <Navbar />
       <Drawer />
-
       <main className="flex w-full flex-col">{children}</main>
       <Footer />
     </div>

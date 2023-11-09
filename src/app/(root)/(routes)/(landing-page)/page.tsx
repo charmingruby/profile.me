@@ -44,19 +44,9 @@ export default function Home() {
             <CurrentStack />
 
             {/* Description */}
-            <p className="text-center font-medium text-gray-palette-200 mt-8 leading-relaxed lg:text-start max-w-lg mx-auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Provident, quae! Autem qui quos esse illum architecto quasi ipsam
-              in adipisci pariatur incidunt hic nihil nesciunt eum optio
-              nostrum, quaerat officia{' '}
-              <Link
-                prefetch={false}
-                href="/"
-                className="text-gray-palette-0 underline underline-offset-1"
-              >
-                Apperize
-              </Link>
-              .
+            <p className="text-center font-medium text-gray-palette-200 mt-8 leading-relaxed lg:text-start max-w-lg mx-auto lg:mx-0">
+              Always aiming to build scalable, reactive and modern applications
+              for the web with what is new in the market.
             </p>
 
             {/* Socials */}
@@ -178,14 +168,16 @@ export default function Home() {
       </section>
 
       {/* Experiences */}
-      <section
-        id="experiences"
-        className="my-8 lg:my-14 bg-gradient-to-br from-primary-600 to-gray-palette-950 w-full py-8 lg:pt-10 lg:pb-20 border-y border-border"
-      >
-        <MaxWidthWrapper className="w-full">
+      <section id="experiences">
+        <MaxWidthWrapper
+          className="
+          bg-gradient-to-br from-primary-600 to-gray-palette-950 border border-border rounded-lg shadow-sm 
+          my-8 py-8 px-6 md:px-16 lg:pt-10 lg:pb-20 lg:px-0 lg:my-14 
+        "
+        >
           {/* Timeline */}
           <div className="max-w-2xl mx-auto">
-            <IntroductionWrapper className="w-full lg:items-center">
+            <IntroductionWrapper className="w-full items-center">
               <SectionBadge>Experiences</SectionBadge>
               <Heading>Timeline</Heading>
             </IntroductionWrapper>

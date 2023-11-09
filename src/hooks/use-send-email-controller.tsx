@@ -38,8 +38,6 @@ export function useEmailController() {
     resolver: zodResolver(formSchema),
   })
 
-  console.log(errors)
-
   const handleSubmit = hookFormHandleSubmit(
     ({ name, email, subject, message }: FormData) => {
       console.log({ name, email, subject, message })
