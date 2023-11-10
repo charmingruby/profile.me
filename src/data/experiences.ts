@@ -1,4 +1,4 @@
-interface Timeline {
+interface Experiences {
   role: string
   entreprise: string
   activityPeriod: string
@@ -6,19 +6,21 @@ interface Timeline {
   tecs: string[]
 }
 
-export const timelines: Timeline[] = [
+export const experiences: Experiences[] = [
   {
     entreprise: 'Apperize',
     role: 'Founder and Developer',
-    description: `Developed an E-commerce, and maintained customer's websites.`,
-    tecs: ['javascript', 'typescript', 'react', 'php', 'html', 'css', 'mysql'],
-    activityPeriod: '2022 - 2023',
-  },
-  {
-    entreprise: 'Code Jr.',
-    role: 'Projects Assistant',
-    description: `Developed an E-commerce, and maintained customer's websites.`,
-    tecs: ['javascript', 'typescript', 'react', 'php', 'html', 'css', 'mysql'],
+    description: `Acting as a Full Stack Developer creating and maintaining applications. In addition, dealing with customers.`,
+    tecs: [
+      'TypeScript',
+      'React',
+      'Next',
+      'TailwindCSS',
+      'Clerk',
+      'GraphQL',
+      'Node',
+      'MySQL',
+    ],
     activityPeriod: '2022 - 2023',
   },
   {
@@ -33,7 +35,14 @@ export const timelines: Timeline[] = [
     entreprise: 'UFJF',
     role: 'Professional Training',
     description: `Developed a project that analyzes developer's skills by the commits on Github.`,
-    tecs: ['Java'],
+    tecs: ['Java', 'Git'],
+    activityPeriod: '2022 - 2023',
+  },
+  {
+    entreprise: 'Code Jr.',
+    role: 'Projects Assistant',
+    description: `Developed an E-commerce, and maintained customer's websites.`,
+    tecs: ['JavaScript', 'TypeScript', 'React', 'PHP', 'HTML', 'CSS', 'MySQL'],
     activityPeriod: '2022 - 2023',
   },
 ]

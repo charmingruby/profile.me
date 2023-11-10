@@ -39,8 +39,16 @@ export function useEmailController() {
   })
 
   const handleSubmit = hookFormHandleSubmit(
-    ({ name, email, subject, message }: FormData) => {
-      console.log({ name, email, subject, message })
+    async ({ name, email, subject, message }: FormData) => {
+      await fetch('api/send-email', {
+        method: 'POST',
+        body: JSON.stringify({
+          authorEmail: email,
+          authorName: name,
+          message,
+          subject,
+        }),
+      })
     },
   )
 

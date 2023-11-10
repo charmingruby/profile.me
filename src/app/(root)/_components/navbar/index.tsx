@@ -11,7 +11,7 @@ export function Navbar() {
       <MaxWidthWrapper className="h-16 flex items-center justify-between">
         <div>
           <Image
-            className="w-8 h-8"
+            className="w-10 h-10"
             src={logoImg}
             alt="Logo of Gustavo's portfolio"
           />

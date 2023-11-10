@@ -9,6 +9,7 @@ const button = cva(
       variant: {
         default:
           'bg-secondary-main hover:bg-secondary-light transition-colors active:bg-secondary-dark text-white',
+        outline: 'border border-secondary-main',
       },
 
       size: {

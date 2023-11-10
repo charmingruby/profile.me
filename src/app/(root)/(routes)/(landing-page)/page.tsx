@@ -10,18 +10,17 @@ import { Heading } from '@/components/ui/heading'
 import { Paragraph } from '@/components/ui/paragraph'
 import { SectionBadge } from '@/components/section-badge'
 import { IntroductionWrapper } from '@/components/introduction-wrapper'
-import { ChevronDown, ChevronRight, Mail } from 'lucide-react'
+import { ChevronDown, ChevronRight } from 'lucide-react'
 import { SkillItem } from './_components/skill-item'
 import { SocialLink } from './_components/social-link'
 import { MeansOfContactList } from './_components/means-of-contact-list'
-import { skills } from '../../../../mocks/skills'
+import { skills } from '../../../../data/skills'
 import { Annotation } from '@/components/annotation'
-import { EmailForm } from './_components/email-form'
-import { ProjectItem } from './_components/project-item'
-import { Timeline } from './_components'
+import { Timeline } from './_components/timeline'
 import { Button } from '@/components/ui/button'
 import { CurrentStack } from './_components/current-stack'
 import { CVDownloadButton } from './_components/cv-download-button'
+import { PinnedProjects } from './_components/pinned-projects'
 
 export default function Home() {
   return (
@@ -149,12 +148,7 @@ export default function Home() {
             <Heading>What I{"'"}ve been working</Heading>
           </IntroductionWrapper>
 
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-          </div>
+          <PinnedProjects />
 
           <div className="flex justify-center w-full mt-8">
             <Link href="/projects" prefetch={false}>
@@ -176,7 +170,7 @@ export default function Home() {
         "
         >
           {/* Timeline */}
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-xl mx-auto">
             <IntroductionWrapper className="w-full items-center">
               <SectionBadge>Experiences</SectionBadge>
               <Heading>Timeline</Heading>
@@ -189,29 +183,19 @@ export default function Home() {
 
       {/* Contact */}
       <section id="contact">
-        <MaxWidthWrapper className="flex flex-col justify-center gap-4 py-0 lg:py-12 mb-8 lg:mb-14">
-          <div className="flex w-full justify-center sm:justify-start">
+        <MaxWidthWrapper className="flex flex-col justify-center gap-4 py-12 mb-14">
+          <div className="flex w-full justify-center">
             <SectionBadge>Contact</SectionBadge>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <div className="w-full">
-              <IntroductionWrapper className="mb-8 text-center sm:text-start">
-                <div className="flex flex-col gap-2">
-                  <Heading>Let{"'"}s network.</Heading>
-                  <Heading>Tell me what you need.</Heading>
-                </div>
-              </IntroductionWrapper>
-
-              <MeansOfContactList />
-            </div>
-
-            <div className="flex flex-col justify-center">
-              <div className="hidden sm:flex flex-col sm:flex-row items-center gap-2 mb-4 text-gray-400">
-                <Mail className="h-4 w-4 mb-px" />
-                <h3 className="text-lg font-medium">Feel free to message me</h3>
+          <div className="w-full">
+            <IntroductionWrapper className="mb-8 text-center">
+              <div className="flex flex-col gap-2">
+                <Heading>Let{"'"}s network.</Heading>
+                <Heading>Tell me what you need.</Heading>
               </div>
-              <EmailForm />
-            </div>
+            </IntroductionWrapper>
+
+            <MeansOfContactList />
           </div>
         </MaxWidthWrapper>
       </section>

@@ -9,6 +9,7 @@ export default function PublicLayout({ children }: PropsWithChildren) {
       <Navbar />
       <Drawer />
       <main className="flex w-full flex-col">{children}</main>
+
       <Footer />
     </div>
   )

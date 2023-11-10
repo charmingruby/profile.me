@@ -1,25 +1,24 @@
 import { MaxWidthWrapper } from '@/components/ui/max-width-wrapper'
-import { ProjectCard } from '../_components/project-card'
 import { TechnologiesCount } from '../_components/technologies-count'
 import { Heading } from '@/components/ui/heading'
-import logoImg from '@/assets/logo/logo.svg'
-import Image from 'next/image'
+import { AllProjectsDisplay } from '../_components/all-projects-display'
+import { Annotation } from '@/components/annotation'
+import { IntroductionWrapper } from '@/components/introduction-wrapper'
 
 export default function Projects() {
   return (
-    <div>
-      <MaxWidthWrapper className="mb-8 flex items-center gap-4">
-        <Image src={logoImg} alt="" className="h-10 w-10" />
-        <Heading>Projects developt</Heading>
-      </MaxWidthWrapper>
+    <MaxWidthWrapper>
+      <IntroductionWrapper className="mb-6 lg:mb-6">
+        <div className="flex gap-2">
+          <div className="flex flex-col gap-2">
+            <Heading>Projects developt</Heading>
+            <Annotation>Most relevant works.</Annotation>
+          </div>
+        </div>
+      </IntroductionWrapper>
 
       <TechnologiesCount />
-      <MaxWidthWrapper className="grid grid-cols-3 gap-8">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-      </MaxWidthWrapper>
-    </div>
+      <AllProjectsDisplay />
+    </MaxWidthWrapper>
   )
 }

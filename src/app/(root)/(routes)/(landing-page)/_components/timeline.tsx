@@ -1,12 +1,12 @@
-import { timelines } from '@/mocks/timelines'
+import { experiences } from '@/data/experiences'
 import { TimelineItem } from './timeline-item'
 
 export function Timeline() {
-  const timelinesAmount = timelines.length
+  const timelinesAmount = experiences.length
 
   return (
     <ul className="relative border-l border-dashed border-gray-700">
-      {timelines.map(
+      {experiences.map(
         ({ role, entreprise, description, tecs, activityPeriod }, idx) => (
           <TimelineItem
             key={role}
