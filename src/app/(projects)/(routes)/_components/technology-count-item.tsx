@@ -9,7 +9,7 @@ export function TechnologyCountItem({ count, name }: TechnologyCountItemProps) {
       <span className="font-medium mt-0.5">{name}</span>
 
       <div className="bg-secondary-main border border-secondary-light shadow-sm h-4 w-4 flex items-center justify-center rounded-full">
-        <small className="text-sm/2 text-white font-bold">{count}</small>
+        <small className="text-xs/2 text-white font-bold">{count}</small>
       </div>
     </div>
   )
