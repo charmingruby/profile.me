@@ -21,6 +21,12 @@ import { Button } from '@/components/ui/button'
 import { CurrentStack } from './_components/current-stack'
 import { CVDownloadButton } from './_components/cv-download-button'
 import { PinnedProjects } from './_components/pinned-projects'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Gustavo Dias | Portfolio',
+  description: "Gustavo's Personal portfolio.",
+}
 
 export default function Home() {
   return (
@@ -66,6 +72,8 @@ export default function Home() {
               src={heroImg}
               alt="Illustration with techonologies"
               className="w-full"
+              quality={100}
+              priority
             />
           </div>
         </div>

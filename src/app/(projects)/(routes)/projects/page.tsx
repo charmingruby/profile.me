@@ -4,6 +4,12 @@ import { Heading } from '@/components/ui/heading'
 import { AllProjectsDisplay } from '../_components/all-projects-display'
 import { Annotation } from '@/components/annotation'
 import { IntroductionWrapper } from '@/components/introduction-wrapper'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Gustavo Dias | Projects',
+  description: "Gustavo's Personal Projects.",
+}
 
 export default function Projects() {
   return (
