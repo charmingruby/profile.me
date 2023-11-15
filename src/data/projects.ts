@@ -4,7 +4,7 @@ export interface Project {
   description: string
   technologies: string[]
   repoUrl: string
-  demoUrl?: string
+  demoUrl: string
 }
 
 export const projects: Project[] = [
@@ -23,6 +23,7 @@ export const projects: Project[] = [
     description: 'Centralizer of issues and errors of in production apps.',
     technologies: ['Elixir', 'Phoenix', 'Ecto', 'PostgreSQL'],
     repoUrl: 'https://github.com/charmingruby/thissue',
+    demoUrl: '',
   },
   {
     title: 'Murdock',
@@ -30,6 +31,7 @@ export const projects: Project[] = [
     description: 'Law firm institutional website.',
     technologies: ['Next', 'TailwindCSS', 'GraphQL', 'TypeScript'],
     repoUrl: 'https://github.com/charmingruby/murdock',
+    demoUrl: '',
   },
   {
     title: 'Pitaya Theme',
@@ -55,6 +57,7 @@ export const projects: Project[] = [
       'TypeScript',
     ],
     repoUrl: 'https://github.com/charmingruby/trinket-gym-api',
+    demoUrl: '',
   },
   {
     title: 'Ping API',
@@ -69,6 +72,7 @@ export const projects: Project[] = [
       'TypeScript',
     ],
     repoUrl: 'https://github.com/charmingruby/ping-api',
+    demoUrl: '',
   },
   {
     title: 'Sloteam API',
@@ -77,6 +81,7 @@ export const projects: Project[] = [
       'Projects management API made to deal with teams inside a project.',
     technologies: ['Node', 'Redis', 'Prisma', 'PostgreSQL', 'TypeScript'],
     repoUrl: 'https://github.com/charmingruby/sloteam-api',
+    demoUrl: '',
   },
   {
     title: 'Spies',
@@ -94,5 +99,6 @@ export const projects: Project[] = [
       'Clean Architecture',
     ],
     repoUrl: 'https://github.com/charmingruby/sloteam-api',
+    demoUrl: '',
   },
 ]

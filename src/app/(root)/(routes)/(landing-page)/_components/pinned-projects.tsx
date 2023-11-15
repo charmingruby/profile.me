@@ -14,7 +14,7 @@ export function PinnedProjects() {
         ({ description, repoUrl, subtitle, technologies, title, demoUrl }) => (
           <ProjectItem
             key={title}
-            demoUrl={demoUrl ?? ''}
+            demoUrl={demoUrl}
             description={description}
             repoUrl={repoUrl}
             subtitle={subtitle}

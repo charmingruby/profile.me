@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { Card } from '@/components/card'
 import { GithubButton } from '../../../../../components/github-button'
 import { Badge } from '@/components/badge'
+import Link from 'next/link'
 
 interface ProjectItemProps {
   description: string
@@ -44,9 +45,11 @@ export function ProjectItem({
       <div className="flex items-center gap-4 8 border-t border-border pt-6 mt-auto">
         <GithubButton url={repoUrl} />
         {demoUrl && (
-          <div className="flex items-center text-base font-medium gap-1 text-gray-palette-200 hover:text-secondary-main cursor-pointer transition-colors">
-            View demo <ArrowUpRight className="h-4 w-4" />
-          </div>
+          <Link href={demoUrl} prefetch={false}>
+            <div className="flex items-center text-base font-medium gap-1 text-gray-palette-200 hover:text-secondary-main cursor-pointer transition-colors">
+              View demo <ArrowUpRight className="h-4 w-4" />
+            </div>
+          </Link>
         )}
       </div>
     </Card>
