@@ -13,7 +13,7 @@ export function CurrentStack() {
           <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
           <span className="font-semibold text-base sm:text-xl">Next</span>
           <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
-          <span className="font-semibold text-base sm:text-xl">Node</span>
+          <span className="font-semibold text-base sm:text-xl">Go</span>
           <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
           <span className="font-semibold text-base sm:text-xl">Elixir</span>
         </div>

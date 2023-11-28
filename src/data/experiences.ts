@@ -8,6 +8,13 @@ interface Experiences {
 
 export const experiences: Experiences[] = [
   {
+    entreprise: 'Concatech',
+    role: 'Backend Developer Jr.',
+    description: `Develop new features and maintain existing applications.`,
+    tecs: ['Elixir', 'Phoenix', 'Ecto', 'Postgres', 'Tests'],
+    activityPeriod: '2023 - Moment',
+  },
+  {
     entreprise: 'Apperize',
     role: 'Founder and Developer',
     description: `Acting as a Full Stack Developer creating and maintaining applications. In addition, dealing with customers.`,
@@ -21,7 +28,7 @@ export const experiences: Experiences[] = [
       'Node',
       'MySQL',
     ],
-    activityPeriod: '2022 - 2023',
+    activityPeriod: '2022 - Moment',
   },
   {
     entreprise: 'UFJF',
