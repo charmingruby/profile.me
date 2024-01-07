@@ -1,3 +1,5 @@
+import { stack } from '@/data/stack'
+
 export function CurrentStack() {
   return (
     <div className="mt-6 flex flex-col w-full lg:w-fit">
@@ -9,13 +11,14 @@ export function CurrentStack() {
         <div className="h-px w-full bg-gray-palette-500 rounded-full" />
 
         <div className="flex items-center gap-1.5 sm:gap-3 text-gray-palette-0">
-          <span className="font-semibold text-base sm:text-xl">React</span>
-          <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
-          <span className="font-semibold text-base sm:text-xl">Next</span>
-          <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
-          <span className="font-semibold text-base sm:text-xl">Go</span>
-          <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
-          <span className="font-semibold text-base sm:text-xl">Elixir</span>
+          {stack.map((tech, idx) => (
+            <>
+              <span className="font-semibold text-base sm:text-xl">{tech}</span>
+              {idx !== stack.length - 1 && (
+                <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
+              )}
+            </>
+          ))}
         </div>
       </div>
     </div>

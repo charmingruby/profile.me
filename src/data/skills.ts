@@ -12,6 +12,8 @@ import pgImg from '@/assets/technologies/postgresql-original.svg'
 import nestImg from '@/assets/technologies/nestjs-plain.svg'
 import tailwindImg from '@/assets/technologies/tailwindcss-plain.svg'
 import golangImg from '@/assets/technologies/go-original-wordmark.svg'
+import javaImg from '@/assets/technologies/java.svg'
+import springImg from '@/assets/technologies/spring-original.svg'
 
 interface Skill {
   logo: StaticImageData
@@ -36,6 +38,18 @@ export const skills: Skill[] = [
     category: 'Frontend',
   },
   {
+    logo: golangImg,
+    name: 'Go',
+    category: 'Backend',
+  },
+  {
+    logo: dockerImg,
+    name: 'Docker',
+    category: 'Infrastructure',
+  },
+  { logo: javaImg, category: 'Backend', name: 'Java' },
+  { logo: springImg, category: 'Backend', name: 'Spring Boot' },
+  {
     logo: graphQlImg,
     name: 'GraphQL',
     category: 'API',
@@ -51,11 +65,6 @@ export const skills: Skill[] = [
     category: 'Backend',
   },
   {
-    logo: golangImg,
-    name: 'Go',
-    category: 'Backend',
-  },
-  {
     logo: nodeImg,
     name: 'Node',
     category: 'Backend',
@@ -64,11 +73,6 @@ export const skills: Skill[] = [
     logo: nestImg,
     name: 'Nest',
     category: 'Backend',
-  },
-  {
-    logo: dockerImg,
-    name: 'Docker',
-    category: 'Infrastructure',
   },
   {
     logo: pgImg,

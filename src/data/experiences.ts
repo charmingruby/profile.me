@@ -12,7 +12,7 @@ export const experiences: Experiences[] = [
     role: 'Backend Developer Jr.',
     description: `Develop new features and maintain existing applications.`,
     tecs: ['Elixir', 'Phoenix', 'Ecto', 'Postgres', 'Tests'],
-    activityPeriod: '2023 - Moment',
+    activityPeriod: '2023 Nov - Moment',
   },
   {
     entreprise: 'Apperize',
@@ -28,7 +28,7 @@ export const experiences: Experiences[] = [
       'Node',
       'MySQL',
     ],
-    activityPeriod: '2022 - Moment',
+    activityPeriod: '2023 Jun - Moment',
   },
   {
     entreprise: 'UFJF',
