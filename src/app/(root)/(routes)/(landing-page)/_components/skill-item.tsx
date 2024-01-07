@@ -8,7 +8,7 @@ interface SkillItemProps {
 
 export function SkillItem({ icon, name, category }: SkillItemProps) {
   return (
-    <div className="flex flex-col items-center text-center w-full gap-4 border border-primary-300 bg-primary-400 rounded-lg shadow-md px-4 py-6">
+    <div className="flex flex-col items-center text-center w-sm gap-4 border border-primary-300 bg-primary-400 rounded-sm shadow-md px-4 py-6">
       <div className="flex">
         <Image src={icon} alt={`${name} logo`} className="h-12 w-12" />
       </div>

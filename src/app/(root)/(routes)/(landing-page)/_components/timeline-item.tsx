@@ -41,7 +41,7 @@ export function TimelineItem({
         {tecs.map((tec) => (
           <div
             key={tec}
-            className="bg-secondary-main w-fit px-3 py-0.5 rounded-full"
+            className="bg-secondary-main w-fit px-3 py-0.5 rounded-sm"
           >
             <span className="font-semibold text-white text-sm capitalize">
               {tec}

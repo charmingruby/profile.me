@@ -10,7 +10,7 @@ import { Heading } from '@/components/ui/heading'
 import { Paragraph } from '@/components/ui/paragraph'
 import { SectionBadge } from '@/components/section-badge'
 import { IntroductionWrapper } from '@/components/introduction-wrapper'
-import { ChevronDown, ChevronRight } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { SkillItem } from './_components/skill-item'
 import { SocialLink } from './_components/social-link'
 import { MeansOfContactList } from './_components/means-of-contact-list'
@@ -162,7 +162,6 @@ export default function Home() {
             <Link href="/projects" prefetch={false}>
               <Button size="lg">
                 <span className="font-medium">View all</span>
-                <ChevronRight className="h-5 w-5 mb-px" strokeWidth={2} />
               </Button>
             </Link>
           </div>
@@ -170,15 +169,16 @@ export default function Home() {
       </section>
 
       {/* Experiences */}
-      <section id="experiences">
-        <MaxWidthWrapper
-          className="
-          bg-gradient-to-br from-primary-600 to-gray-palette-950 border border-border rounded-lg shadow-sm 
+      <section
+        id="experiences"
+        className="
+          bg-gradient-to-br from-primary-600 to-gray-palette-950 border border-border 
           my-8 py-8 px-6 md:px-16 lg:pt-10 lg:pb-20 lg:px-0 lg:my-14 
         "
-        >
+      >
+        <MaxWidthWrapper>
           {/* Timeline */}
-          <div className="max-w-xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             <IntroductionWrapper className="w-full items-center">
               <SectionBadge>Experiences</SectionBadge>
               <Heading>Timeline</Heading>

@@ -18,7 +18,7 @@ export function MeanOfContactItem({
     <Link
       href={url}
       prefetch={false}
-      className="flex flex-col items-center gap-4 bg-primary-300 w-fit p-2 sm:p-2.5 rounded-lg border border-border hover:bg-primary-400 transition-colors"
+      className="flex flex-col items-center gap-4 bg-primary-300 w-fit p-2 sm:p-2.5 rounded-sm border border-border hover:bg-primary-400 transition-colors"
     >
       {image ? (
         <Image src={image} alt={url} className="h-8 w-8" />

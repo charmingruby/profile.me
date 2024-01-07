@@ -12,12 +12,12 @@ export function CurrentStack() {
 
         <div className="flex items-center gap-1.5 sm:gap-3 text-gray-palette-0">
           {stack.map((tech, idx) => (
-            <>
+            <div key={idx} className="flex items-center gap-1.5 sm:gap-3">
               <span className="font-semibold text-base sm:text-xl">{tech}</span>
               {idx !== stack.length - 1 && (
                 <div className="w-1 h-1 rounded-full bg-gray-palette-0" />
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>
