@@ -5,7 +5,7 @@ import { Drawer } from './_components/drawer'
 
 export default function PublicLayout({ children }: PropsWithChildren) {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center scroll-smooth">
       <Navbar />
       <Drawer />
       <main className="flex w-full flex-col">{children}</main>

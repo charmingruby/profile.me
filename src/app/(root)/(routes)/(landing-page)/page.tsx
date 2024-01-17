@@ -84,7 +84,7 @@ export default function Home() {
       </MaxWidthWrapper>
 
       {/* Journey */}
-      <section id="about">
+      <section id="about" className="scroll-mt-16">
         <MaxWidthWrapper className="grid grid-cols-1 gap-8 mt-16 lg:mt-28 md:grid-cols-2">
           <div className="flex justify-center items-center order-last md:order-first">
             <div className="max-w-xs p-1 lg:max-w-sm relative rounded-xl border border-secondary-main ">
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills">
+      <section id="skills" className="scroll-mt-16">
         <MaxWidthWrapper className="mt-16 lg:mt-28">
           <IntroductionWrapper className="lg:text-center lg:items-center">
             <SectionBadge>Skills</SectionBadge>
@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section id="projects">
+      <section id="projects" className="scroll-mt-16">
         <MaxWidthWrapper className="mt-16 lg:mt-28">
           <IntroductionWrapper>
             <SectionBadge>Projects</SectionBadge>
@@ -173,7 +173,7 @@ export default function Home() {
         id="experiences"
         className="
           bg-gradient-to-br from-primary-600 to-gray-palette-950 border border-border 
-          my-8 py-8 px-6 md:px-16 lg:pt-10 lg:pb-20 lg:px-0 lg:my-14 
+          my-8 py-8 px-6 md:px-16 lg:pt-10 lg:pb-20 lg:px-0 lg:my-14 scroll-mt-16 
         "
       >
         <MaxWidthWrapper>
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact">
+      <section id="contact" className="scroll-mt-16">
         <MaxWidthWrapper className="flex flex-col justify-center gap-4 py-12 mb-14">
           <div className="flex w-full justify-center">
             <SectionBadge>Contact</SectionBadge>

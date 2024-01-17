@@ -5,7 +5,7 @@ export function CVDownloadButton() {
   return (
     <Button className="w-fit py-1 sm:py-2 px-4">
       <a
-        href="/GustavoDiasCV.pdf"
+        href="/GustavoDias_CV_2024.pdf"
         target="_blank"
         download
         className="flex items-center gap-2 "
