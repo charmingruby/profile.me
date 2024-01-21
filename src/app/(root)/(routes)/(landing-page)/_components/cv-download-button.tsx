@@ -3,7 +3,7 @@ import { Download } from 'lucide-react'
 
 export function CVDownloadButton() {
   return (
-    <Button className="w-fit py-1 sm:py-2 px-4">
+    <Button className="w-full sm:w-fit py-1 sm:py-2 px-4">
       <a
         href="/GustavoDias_CV_2024.pdf"
         target="_blank"

@@ -2,7 +2,7 @@ import { projects } from '@/data/projects'
 import { ProjectItem } from './project-item'
 
 export function PinnedProjects() {
-  const projectsNameFilter = ['Apperize', 'Pitaya Theme', 'Thissue', 'Murdock']
+  const projectsNameFilter = ['Apperize', 'Clize', 'Backpago', 'Subsbase']
 
   const filteredProjects = projects.filter((project) =>
     projectsNameFilter.includes(project.title),

@@ -37,11 +37,15 @@ export default function Home() {
           <div className="flex flex-col justify-center">
             {/* Heading */}
             <div className="text-center w-full lg:text-start">
-              <h1 className="font-bold my-0 mt-8 text-white text-5xl sm:text-6xl ">
+              <span className="font-semibold text-lg text-gray-palette-0">
+                Full Stack Developer
+              </span>
+
+              <h1 className="font-bold my-0 mt-8 text-white text-5xl sm:text-5xl ">
                 Hello, I{"'"}m
               </h1>
 
-              <h1 className="text-5xl bg-clip-text bg-gradient-to-r from-secondary-light via-[#00F5D4] to-secondary-main text-transparent font-bold my-0 sm:text-6xl">
+              <h1 className="text-5xl bg-clip-text bg-gradient-to-r from-secondary-light via-[#00F5D4] to-secondary-main text-transparent font-bold my-0">
                 Gustavo Dias
               </h1>
             </div>
@@ -81,6 +85,8 @@ export default function Home() {
         <div className="bottom-16 right-1/2 absolute border border-border rounded-full h-10 hidden items-end lg:flex">
           <ChevronDown className="h-7 w-7 animate-bounce" />
         </div>
+
+        <div className="absolute h-full w-full bg-[radial-gradient(#333333,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
       </MaxWidthWrapper>
 
       {/* Journey */}

@@ -1,1 +1,1 @@
-export const stack: string[] = ['React', 'Next', 'Elixir', 'Go', 'Java']
+export const stack: string[] = ['React', 'Go', 'Java', 'Elixir']
