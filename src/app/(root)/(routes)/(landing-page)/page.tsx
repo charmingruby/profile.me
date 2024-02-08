@@ -21,7 +21,7 @@ import { Button } from '@/components/ui/button'
 import { CurrentStack } from './_components/current-stack'
 import { CVDownloadButton } from './_components/cv-download-button'
 import { PinnedProjects } from './_components/pinned-projects'
-import { Metadata } from 'next'
+import Metadata from 'next'
 
 export const metadata: Metadata = {
   title: 'Gustavo Dias | Portfolio',
@@ -86,7 +86,7 @@ export default function Home() {
           <ChevronDown className="h-7 w-7 animate-bounce" />
         </div>
 
-        <div className="absolute h-full w-full bg-[radial-gradient(#333333,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+        <div className=" -z-10 absolute h-full w-full bg-[radial-gradient(#333333,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
       </MaxWidthWrapper>
 
       {/* Journey */}
