@@ -21,7 +21,7 @@ import { Button } from '@/components/ui/button'
 import { CurrentStack } from './_components/current-stack'
 import { CVDownloadButton } from './_components/cv-download-button'
 import { PinnedProjects } from './_components/pinned-projects'
-import Metadata from 'next'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Gustavo Dias | Portfolio',
@@ -90,7 +90,7 @@ export default function Home() {
       </MaxWidthWrapper>
 
       {/* Journey */}
-      <section id="about" className="scroll-mt-16">
+      <section id="about" className="scroll-mt-24">
         <MaxWidthWrapper className="grid grid-cols-1 gap-8 mt-16 lg:mt-28 md:grid-cols-2">
           <div className="flex justify-center items-center order-last md:order-first">
             <div className="max-w-xs p-1 lg:max-w-sm relative rounded-xl border border-secondary-main ">
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="scroll-mt-16">
+      <section id="skills" className="scroll-mt-24">
         <MaxWidthWrapper className="mt-16 lg:mt-28">
           <IntroductionWrapper className="lg:text-center lg:items-center">
             <SectionBadge>Skills</SectionBadge>
@@ -154,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="scroll-mt-16">
+      <section id="projects" className="scroll-mt-24">
         <MaxWidthWrapper className="mt-16 lg:mt-28">
           <IntroductionWrapper>
             <SectionBadge>Projects</SectionBadge>
@@ -179,7 +179,7 @@ export default function Home() {
         id="experiences"
         className="
           bg-gradient-to-br from-primary-600 to-gray-palette-950 border border-border 
-          my-8 py-8 px-6 md:px-16 lg:pt-10 lg:pb-20 lg:px-0 lg:my-14 scroll-mt-16 
+          my-8 py-8 px-6 md:px-16 lg:pt-10 lg:pb-20 lg:px-0 lg:my-14 scroll-mt-24 
         "
       >
         <MaxWidthWrapper>
@@ -196,7 +196,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="scroll-mt-16">
+      <section id="contact" className="scroll-mt-24">
         <MaxWidthWrapper className="flex flex-col justify-center gap-4 py-12 mb-14">
           <div className="flex w-full justify-center">
             <SectionBadge>Contact</SectionBadge>
